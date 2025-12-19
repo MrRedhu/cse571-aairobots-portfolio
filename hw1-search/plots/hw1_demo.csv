@@ -1,0 +1,6 @@
+Dimension, Obstacles, Seed, Algorithm, Time, Nodes Expanded, Plan Length, Error, Plan, Env
+3x6, 0, 1766168018, bfs, 4.15, 472, 25, None, MoveF_TurnCCW_MoveF_MoveF_TurnCW_MoveF_MoveF_TurnCCW_MoveF_MoveF_MoveF_MoveF_MoveF_MoveF_MoveF_MoveF_MoveF_MoveF_TurnCCW_MoveF_MoveF_TurnCW_MoveF_MoveF_MoveF, cafeWorld
+3x6, 0, 1766168018, ucs, 4.23, 492, 25, None, MoveF_TurnCCW_MoveF_MoveF_MoveF_MoveF_MoveF_MoveF_MoveF_MoveF_MoveF_TurnCW_MoveF_MoveF_TurnCCW_MoveF_MoveF_MoveF_TurnCCW_MoveF_MoveF_TurnCW_MoveF_MoveF_MoveF, cafeWorld
+3x6, 0, 1766168018, gbfs, 0.39, 43, 27, None, MoveF_TurnCCW_MoveF_MoveF_MoveF_MoveF_MoveF_MoveF_MoveF_MoveF_MoveF_TurnCW_MoveF_TurnCCW_MoveF_TurnCW_MoveF_TurnCCW_MoveF_MoveF_TurnCCW_MoveF_MoveF_TurnCW_MoveF_MoveF_MoveF, cafeWorld
+3x6, 0, 1766168018, astar, 3.75, 425, 25, None, MoveF_TurnCCW_MoveF_MoveF_MoveF_MoveF_MoveF_MoveF_MoveF_MoveF_MoveF_TurnCW_MoveF_MoveF_TurnCCW_MoveF_MoveF_MoveF_TurnCCW_MoveF_MoveF_TurnCW_MoveF_MoveF_MoveF, cafeWorld
+3x6, 0, 1766168018, custom-astar, 3.32, 376, 25, None, MoveF_TurnCCW_MoveF_MoveF_MoveF_MoveF_MoveF_MoveF_MoveF_MoveF_MoveF_TurnCW_MoveF_MoveF_TurnCCW_MoveF_MoveF_MoveF_TurnCCW_MoveF_MoveF_TurnCW_MoveF_MoveF_MoveF, cafeWorld
