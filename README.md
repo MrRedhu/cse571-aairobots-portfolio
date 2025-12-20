@@ -60,3 +60,19 @@ This repo showcases three projects demonstrating:
 
 ## How to run (high level)
 Each HW folder will include its own `README.md` with exact run commands and expected outputs.
+
+---
+
+## Showcase
+
+### HW1 — Search demo (A*)
+![HW1 Demo](hw1-search/demo/hw1_demo.gif)
+
+### HW3 — Reward vs Episodes
+![HW3 cafeWorld](hw3-rl/plots/qlearning_cafeWorld.png)
+![HW3 bookWorld](hw3-rl/plots/qlearning_bookWorld.png)
+
+### Quick navigation
+- HW1: `hw1-search/`
+- HW2: `hw2-planning/`
+- HW3: `hw3-rl/`
