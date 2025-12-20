@@ -1,78 +1,57 @@
-# Autonomous AI Agents: Search, Planning, and Reinforcement Learning (CSE 571)
+# CSE 571 — AAIRobots Portfolio (Search • Planning • Reinforcement Learning)
 
-This repo showcases three projects demonstrating:
-- Classical Search (BFS / UCS / Greedy Best-First / A*)
-- Task & Motion-style Planning with PDDL + refinement
-- Reinforcement Learning (Q-Learning / Approx Q-Learning) in a stochastic environment
+This repo is a cleaned portfolio version of my CSE 571 AAIRobots assignments (originally from GitHub Classroom, then forked and reorganized).
 
-> Note: Original environments/scaffolding were provided via a course GitHub Classroom setup.
-> This portfolio repo focuses on *my implementation + demos* and avoids redistributing large third-party code or private identifiers.
-
----
-
-## Demos (watch first)
-
-- HW3 RL agent demo: `assets/gifs/hw3_rl_demo.gif`
-- Reward vs Episodes: `assets/plots/hw3_reward_curve.png`
+## Quick navigation
+- HW1 — Classical Search: `hw1-search/`
+- HW2 — Planning + Refinement (PDDL): `hw2-planning/`
+- HW3 — Reinforcement Learning (Q-Learning): `hw3-rl/`
 
 ---
 
-## Homework 1 — Search (BFS, UCS, GBFS, A*)
+## Visual showcase
 
-**What I implemented**
-- Graph search with explored/frontier control
-- Heuristic design for A*
-- Performance profiling: nodes expanded, plan length
+### HW1 — A* search replay (Gazebo → GIF)
+![HW1 Search Demo](hw1-search/demo/hw1_demo.gif)
 
-**Code**
-- `hw1-search/src/`
-
-**Results**
-- `hw1-search/plots/` and `assets/plots/`
+### HW3 — Reward vs Episodes (learned policy improving)
+![HW3 cafeWorld rewards](hw3-rl/plots/qlearning_cafeWorld.png)
+![HW3 bookWorld rewards](hw3-rl/plots/qlearning_bookWorld.png)
 
 ---
 
-## Homework 2 — Planning (PDDL + Refinement)
+## What each folder contains
 
-**What I implemented**
-- High-level planning with PDDL (domain/problem)
-- Refinement of actions into executable low-level plans
-- Debugging and validation via testcases + simulation runs
+### HW1 — Classical Search
+- Code: `hw1-search/scripts/`
+- Demo: `hw1-search/demo/`
+- Run logs/results: `hw1-search/plots/`
 
-**Code**
-- `hw2-planning/src/`
-- `hw2-planning/pddl/`
+Reference commands (from the assignment):
+- Generate CSV output:
+  `rosrun hw1 search.py --output-file /tmp/test.csv`
+- Replay a specific run:
+  `rosrun hw1 gazebo.py --input-file /tmp/test.csv --line 3`
 
----
+### HW2 — Planning + Refinement
+- PDDL: `hw2-planning/pddl/`
+- Code: `hw2-planning/scripts/`
+- Run logs/results: `hw2-planning/plots/` (portfolio copy of the results CSV)
 
-## Homework 3 — Reinforcement Learning (Q-Learning)
+Reference commands (from the assignment):
+- Run refinement:
+  `rosrun hw2 refinement.py --objtypes <N> --objcount <N> --seed <seed> --env <cafeWorld|bookWorld>`
+- Replay results:
+  `rosrun hw2 gazebo.py --input-file ~/catkin_ws/src/hw2/results.csv --line <line>`
 
-**What I implemented**
-- Q-value update rules + epsilon decay
-- Epsilon-greedy learning
-- Reward tracking + convergence plots
-- Handling stochastic transitions
+### HW3 — Reinforcement Learning (Q-Learning)
+- Code: `hw3-rl/scripts/qlearning.py`
+- Output CSV + plots: `hw3-rl/plots/`  
+  (plots are named `qlearning_{cafeWorld|bookWorld}.png`)
 
-**Code**
-- `hw3-rl/src/`
+Reference command (from the assignment):
+- Generate submission outputs:
+  `rosrun hw3 qlearning.py --submit`
 
----
+Note: HW3 does not include Gazebo playback like HW1/HW2; you can monitor learning via ROS topics (e.g., `rostopic echo /status` while it runs).
 
-## How to run (high level)
-Each HW folder will include its own `README.md` with exact run commands and expected outputs.
-
----
-
-## Showcase
-
-### HW1 — Search demo (A*)
-![HW1 Demo](hw1-search/demo/hw1_demo.gif)
-
-### HW3 — Reward vs Episodes
-![HW3 cafeWorld](hw3-rl/plots/qlearning_cafeWorld.png)
-![HW3 bookWorld](hw3-rl/plots/qlearning_bookWorld.png)
-
-### Quick navigation
-- HW1: `hw1-search/`
-- HW2: `hw2-planning/`
-- HW3: `hw3-rl/`
